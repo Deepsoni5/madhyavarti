@@ -1,0 +1,231 @@
+import type { Metadata } from "next"
+import Link from "next/link"
+import { Header } from "@/components/header"
+import { Footer } from "@/components/footer"
+import { ArrowRight, CheckCircle, Globe, BarChart3, Users, Clock } from "lucide-react"
+
+export const metadata: Metadata = {
+  title: "Our Products | Madhyavarti Solutions",
+  description:
+    "Discover Jobonix and Loanery - innovative platforms connecting talent with opportunity and providing ethical financial solutions.",
+  openGraph: {
+    title: "Our Products | Madhyavarti Solutions",
+    description: "Jobonix - Job Portal | Loanery - Fintech Solutions",
+  },
+}
+
+export default function Products() {
+  const jobonixFeatures = [
+    { icon: Users, text: "Smart job matching" },
+    { icon: CheckCircle, text: "Skill-based filtering" },
+    { icon: Clock, text: "Easy application tracking" },
+    { icon: Globe, text: "Employer verification" },
+  ]
+
+  const loaneryFeatures = [
+    { icon: CheckCircle, text: "Transparent terms" },
+    { icon: BarChart3, text: "Multiple lender comparison" },
+    { icon: Clock, text: "Quick pre-qualification" },
+    { icon: Users, text: "Financial guidance" },
+  ]
+
+  return (
+    <main className="min-h-screen bg-background">
+      <Header />
+
+      {/* Hero Section */}
+      <section className="relative py-20 px-4 sm:px-6 lg:px-8 overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-transparent to-accent/5" />
+        <div className="relative z-10 max-w-6xl mx-auto text-center space-y-6 mb-20">
+          <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold text-foreground">
+            Our <span className="bg-clip-text text-transparent bg-gradient-to-r from-primary to-accent">Products</span>
+          </h1>
+          <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+            Innovative platforms designed to bridge gaps and create opportunities
+          </p>
+        </div>
+
+        {/* Products Grid */}
+        <div className="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12">
+          {/* Jobonix */}
+          <div className="group relative rounded-3xl overflow-hidden border border-border bg-card hover:border-primary/50 transition-all duration-300 hover:shadow-2xl hover:shadow-primary/10">
+            <div className="absolute inset-0 bg-gradient-to-br from-blue-600/10 to-cyan-600/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+
+            <div className="relative z-10 p-8 sm:p-12 h-full flex flex-col justify-between">
+              {/* Header */}
+              <div className="space-y-4 mb-8">
+                <div className="inline-flex px-4 py-2 rounded-full bg-blue-500/10 border border-blue-500/30">
+                  <span className="text-sm font-semibold text-blue-600 dark:text-blue-400">Job Portal</span>
+                </div>
+                <h2 className="text-4xl sm:text-5xl font-bold text-foreground">Jobonix</h2>
+                <p className="text-lg text-muted-foreground leading-relaxed">
+                  A comprehensive job portal platform connecting employers with qualified candidates, streamlining the
+                  recruitment process.
+                </p>
+              </div>
+
+              {/* About Section */}
+              <div className="space-y-6 mb-8 pb-8 border-b border-border">
+                <div>
+                  <h3 className="text-xl font-bold text-foreground mb-3">About Jobonix</h3>
+                  <p className="text-muted-foreground leading-relaxed">
+                    Jobonix is designed to bridge the gap between talent and opportunity, focusing on real-world skills
+                    and practical employment. Our platform helps businesses find the right people while giving job
+                    seekers a straightforward path to meaningful work.
+                  </p>
+                </div>
+              </div>
+
+              {/* Features */}
+              <div className="space-y-4 mb-8">
+                <h3 className="text-xl font-bold text-foreground">Key Features</h3>
+                <div className="grid grid-cols-2 gap-3">
+                  {jobonixFeatures.map((feature, idx) => {
+                    const Icon = feature.icon
+                    return (
+                      <div key={idx} className="flex items-center gap-3 p-3 rounded-lg bg-blue-500/5">
+                        <Icon className="w-5 h-5 text-blue-600 dark:text-blue-400 flex-shrink-0" />
+                        <span className="text-sm font-medium text-foreground">{feature.text}</span>
+                      </div>
+                    )
+                  })}
+                </div>
+              </div>
+
+              {/* CTA */}
+              <div className="flex flex-col sm:flex-row gap-4">
+                <Link
+                  href="https://jobonix.com"
+                  target="_blank"
+                  className="px-6 py-3 rounded-full bg-blue-600 text-white font-semibold hover:bg-blue-700 transition-colors flex items-center justify-center gap-2 hover:shadow-lg hover:shadow-blue-600/30"
+                >
+                  Visit Website
+                  <ArrowRight className="w-4 h-4" />
+                </Link>
+              </div>
+            </div>
+          </div>
+
+          {/* Loanery */}
+          <div className="group relative rounded-3xl overflow-hidden border border-border bg-card hover:border-primary/50 transition-all duration-300 hover:shadow-2xl hover:shadow-primary/10">
+            <div className="absolute inset-0 bg-gradient-to-br from-emerald-600/10 to-teal-600/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+
+            <div className="relative z-10 p-8 sm:p-12 h-full flex flex-col justify-between">
+              {/* Header */}
+              <div className="space-y-4 mb-8">
+                <div className="inline-flex px-4 py-2 rounded-full bg-emerald-500/10 border border-emerald-500/30">
+                  <span className="text-sm font-semibold text-emerald-600 dark:text-emerald-400">Fintech</span>
+                </div>
+                <h2 className="text-4xl sm:text-5xl font-bold text-foreground">Loanery</h2>
+                <p className="text-lg text-muted-foreground leading-relaxed">
+                  An innovative fintech solution designed to simplify loan processing and connect borrowers with
+                  suitable lending options.
+                </p>
+              </div>
+
+              {/* About Section */}
+              <div className="space-y-6 mb-8 pb-8 border-b border-border">
+                <div>
+                  <h3 className="text-xl font-bold text-foreground mb-3">About Loanery</h3>
+                  <p className="text-muted-foreground leading-relaxed">
+                    Loanery makes financial solutions accessible to everyone, regardless of background. We provide
+                    transparent, ethical loan mediation services that help people overcome financial hurdles with
+                    dignity and confidence.
+                  </p>
+                </div>
+              </div>
+
+              {/* Features */}
+              <div className="space-y-4 mb-8">
+                <h3 className="text-xl font-bold text-foreground">Key Features</h3>
+                <div className="grid grid-cols-2 gap-3">
+                  {loaneryFeatures.map((feature, idx) => {
+                    const Icon = feature.icon
+                    return (
+                      <div key={idx} className="flex items-center gap-3 p-3 rounded-lg bg-emerald-500/5">
+                        <Icon className="w-5 h-5 text-emerald-600 dark:text-emerald-400 flex-shrink-0" />
+                        <span className="text-sm font-medium text-foreground">{feature.text}</span>
+                      </div>
+                    )
+                  })}
+                </div>
+              </div>
+
+              {/* CTA */}
+              <div className="flex flex-col sm:flex-row gap-4">
+                <Link
+                  href="https://loanery.com"
+                  target="_blank"
+                  className="px-6 py-3 rounded-full bg-emerald-600 text-white font-semibold hover:bg-emerald-700 transition-colors flex items-center justify-center gap-2 hover:shadow-lg hover:shadow-emerald-600/30"
+                >
+                  Visit Website
+                  <ArrowRight className="w-4 h-4" />
+                </Link>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Why Our Products */}
+        <div className="max-w-6xl mx-auto mt-24 pt-24 border-t border-border">
+          <div className="space-y-8">
+            <div className="text-center space-y-4">
+              <h2 className="text-4xl font-bold text-foreground">Why Choose Our Products?</h2>
+              <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+                Built on principles of transparency, innovation, and user empowerment
+              </p>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              <div className="p-8 rounded-2xl bg-card border border-border hover:border-primary/50 transition-colors">
+                <div className="p-3 rounded-lg bg-primary/10 w-fit mb-4">
+                  <Users className="w-6 h-6 text-primary" />
+                </div>
+                <h3 className="text-xl font-bold text-foreground mb-2">User-Centric Design</h3>
+                <p className="text-muted-foreground">
+                  Intuitive interfaces crafted with real users in mind, making complex processes simple.
+                </p>
+              </div>
+
+              <div className="p-8 rounded-2xl bg-card border border-border hover:border-primary/50 transition-colors">
+                <div className="p-3 rounded-lg bg-primary/10 w-fit mb-4">
+                  <CheckCircle className="w-6 h-6 text-primary" />
+                </div>
+                <h3 className="text-xl font-bold text-foreground mb-2">Trusted & Reliable</h3>
+                <p className="text-muted-foreground">
+                  Security, transparency, and reliability are at the core of everything we build.
+                </p>
+              </div>
+
+              <div className="p-8 rounded-2xl bg-card border border-border hover:border-primary/50 transition-colors">
+                <div className="p-3 rounded-lg bg-primary/10 w-fit mb-4">
+                  <Globe className="w-6 h-6 text-primary" />
+                </div>
+                <h3 className="text-xl font-bold text-foreground mb-2">Continuously Evolving</h3>
+                <p className="text-muted-foreground">
+                  Regular updates and new features ensuring we stay ahead of market needs.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* CTA Section */}
+        <div className="max-w-4xl mx-auto mt-24 pt-24 border-t border-border text-center space-y-6">
+          <h2 className="text-4xl font-bold text-foreground">Ready to Experience Innovation?</h2>
+          <p className="text-lg text-muted-foreground">
+            Explore Jobonix and Loanery today to see how we're transforming opportunities.
+          </p>
+          <Link
+            href="/contact"
+            className="inline-flex px-8 py-4 rounded-full bg-primary text-primary-foreground font-semibold hover:bg-primary/90 hover:shadow-lg hover:shadow-primary/30 transition-all"
+          >
+            Get in Touch
+          </Link>
+        </div>
+      </section>
+
+      <Footer />
+    </main>
+  )
+}
