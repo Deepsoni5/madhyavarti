@@ -1,6 +1,6 @@
 "use client"
 
-import { motion } from "framer-motion"
+import { motion, Variants } from "framer-motion"
 import { useEffect, useRef, useState } from "react"
 
 function AnimatedNumber({ value, suffix = "" }: { value: number; suffix?: string }) {
@@ -52,32 +52,32 @@ function AnimatedNumber({ value, suffix = "" }: { value: number; suffix?: string
 export function Stats() {
   const stats = [
     {
-      number: 500,
+      number: 50,
       suffix: "+",
       label: "Happy Clients",
       description: "Trusted by businesses across industries worldwide",
     },
     {
-      number: 1000,
+      number: 10,
       suffix: "+",
       label: "Projects Completed",
       description: "Successfully delivered innovative solutions",
     },
     {
-      number: 95,
+      number: 97,
       suffix: "%",
       label: "Client Satisfaction",
       description: "Commitment to excellence and quality",
     },
     {
-      number: 9,
+      number: 5,
       suffix: "+",
       label: "Years in Industry",
       description: "Proven track record of success",
     },
   ]
 
-  const containerVariants = {
+  const containerVariants: Variants = {
     hidden: { opacity: 0 },
     visible: {
       opacity: 1,
@@ -88,14 +88,14 @@ export function Stats() {
     },
   }
 
-  const itemVariants = {
+  const itemVariants: Variants = {
     hidden: { opacity: 0, y: 20 },
     visible: {
       opacity: 1,
       y: 0,
       transition: {
         duration: 0.6,
-        ease: [0.25, 0.4, 0.25, 1],
+        ease: [0.25, 0.4, 0.25, 1] as const,
       },
     },
   }

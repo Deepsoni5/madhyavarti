@@ -20,15 +20,15 @@ export function About() {
             <h3 className="text-xl font-semibold text-foreground mb-6">Key Milestones:</h3>
             <div className="space-y-6">
               <div className="flex items-start gap-4">
-                <div className="text-3xl font-bold text-accent min-w-[80px]">500+</div>
+                <div className="text-3xl font-bold text-accent min-w-[80px]">100+</div>
                 <p className="text-muted-foreground pt-1">Users Impacted through our digital platforms</p>
               </div>
               <div className="flex items-start gap-4">
-                <div className="text-3xl font-bold text-accent min-w-[80px]">1,000+</div>
-                <p className="text-muted-foreground pt-1">Platform Deployments across fintech and HR-Tech solutions</p>
+                <div className="text-3xl font-bold text-accent min-w-[80px]">50%</div>
+                <p className="text-muted-foreground pt-1">Faster deployment time compared to industry standards</p>
               </div>
               <div className="flex items-start gap-4">
-                <div className="text-3xl font-bold text-accent min-w-[80px]">15+</div>
+                <div className="text-3xl font-bold text-accent min-w-[80px]">10+</div>
                 <p className="text-muted-foreground pt-1">Years of Combined Engineering Excellence</p>
               </div>
             </div>

@@ -1,5 +1,7 @@
 "use client"
 
+import Image from "next/image"
+
 import Link from "next/link"
 import { useState } from "react"
 import { ThemeToggle } from "./theme-toggle"
@@ -8,21 +10,25 @@ export function Header() {
   const [isOpen, setIsOpen] = useState(false)
 
   return (
-    <header className="sticky top-0 z-40 w-full border-b border-border/40 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
-      <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex items-center justify-between">
-        <div className="flex items-center gap-2">
-          <div className="w-10 h-10 rounded-lg bg-primary flex items-center justify-center text-primary-foreground font-bold text-lg">
-            M
-          </div>
-          <Link href="/" className="text-2xl font-bold text-foreground hover:text-primary transition-colors">
-            Madhyavarti
+    <header className="sticky top-0 z-40 w-full border-b border-border/40 bg-slate-100/95 dark:bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-slate-100/80 dark:supports-[backdrop-filter]:bg-background/60">
+      <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between h-24">
+        <div className="relative h-full w-80">
+          <Link href="/" className="absolute left-0 top-[55%] -translate-y-1/2 flex items-center h-44">
+            <Image
+              src="/mlogo.png"
+              alt="Madhyavarti Solutions"
+              width={600}
+              height={200}
+              className="h-full w-auto object-contain"
+              priority
+            />
           </Link>
         </div>
 
         {/* Mobile menu button */}
         <div className="flex md:hidden items-center gap-4">
           <ThemeToggle />
-          <button onClick={() => setIsOpen(!isOpen)} className="md:hidden" aria-label="Toggle menu">
+          <button onClick={() => setIsOpen(!isOpen)} className="text-foreground" aria-label="Toggle menu">
             <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               {isOpen ? (
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />

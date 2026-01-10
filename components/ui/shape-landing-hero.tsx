@@ -217,11 +217,11 @@ function HeroGeometric({
             className="grid grid-cols-3 gap-4 pt-12 md:pt-16 border-t border-border/50 dark:border-white/[0.1] mt-12 md:mt-16 text-center"
           >
             <div className="space-y-2">
-              <p className="text-3xl sm:text-4xl font-bold text-primary">500+</p>
-              <p className="text-xs sm:text-sm text-muted-foreground dark:text-white/60">Clients Worldwide</p>
+              <div className="text-3xl font-bold text-primary min-w-[80px]">60%</div>
+              <p className="text-muted-foreground pt-1">Faster API integration and system setup</p>
             </div>
             <div className="space-y-2">
-              <p className="text-3xl sm:text-4xl font-bold text-primary">1000+</p>
+              <p className="text-3xl sm:text-4xl font-bold text-primary">20+</p>
               <p className="text-xs sm:text-sm text-muted-foreground dark:text-white/60">Projects Delivered</p>
             </div>
             <div className="space-y-2">

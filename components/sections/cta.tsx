@@ -44,19 +44,19 @@ export function CTA() {
           {/* Stats row */}
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-8 pt-12 border-t border-border/50">
             <div className="text-center space-y-2">
-              <p className="text-3xl sm:text-4xl font-bold text-primary">500+</p>
+              <p className="text-3xl sm:text-4xl font-bold text-primary">100+</p>
               <p className="text-sm text-muted-foreground">Users supported through Jobonix and KuCash</p>
             </div>
             <div className="text-center space-y-2">
-              <p className="text-3xl sm:text-4xl font-bold text-primary">100+</p>
+              <p className="text-3xl sm:text-4xl font-bold text-primary">200+</p>
               <p className="text-sm text-muted-foreground">Transactions & Matches processed on our platforms</p>
             </div>
             <div className="text-center space-y-2">
-              <p className="text-3xl sm:text-4xl font-bold text-primary">15+</p>
+              <p className="text-3xl sm:text-4xl font-bold text-primary">9+</p>
               <p className="text-sm text-muted-foreground">Years of Technology Innovation driving scalable solutions</p>
             </div>
             <div className="text-center space-y-2">
-              <p className="text-3xl sm:text-4xl font-bold text-primary">99%</p>
+              <p className="text-3xl sm:text-4xl font-bold text-primary">97%</p>
               <p className="text-sm text-muted-foreground">Secure & Compliant Operations across platforms</p>
             </div>
           </div>

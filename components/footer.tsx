@@ -1,4 +1,5 @@
 import Link from "next/link"
+import Image from "next/image"
 import { Mail, Phone, MapPin, Linkedin, Twitter } from "lucide-react"
 
 export function Footer() {
@@ -16,11 +17,16 @@ export function Footer() {
           <div className="grid grid-cols-1 md:grid-cols-5 gap-12 mb-12">
             {/* Brand section */}
             <div className="md:col-span-2">
-              <div className="flex items-center gap-2 mb-4">
-                <div className="w-10 h-10 rounded-lg bg-primary flex items-center justify-center text-primary-foreground font-bold">
-                  M
-                </div>
-                <h3 className="text-2xl font-bold text-foreground">Madhyavarti</h3>
+              <div className="mb-4">
+                <Link href="/">
+                  <Image
+                    src="/mlogo.png"
+                    alt="Madhyavarti Solutions"
+                    width={500}
+                    height={200}
+                    className="h-44 w-auto object-contain -ml-4"
+                  />
+                </Link>
               </div>
               <p className="text-muted-foreground leading-relaxed mb-6">
                 Leading IT solutions provider transforming businesses through cutting-edge technology and innovation
@@ -112,11 +118,16 @@ export function Footer() {
 
           {/* Bottom footer */}
           <div className="py-8 flex flex-col md:flex-row items-center justify-between gap-4">
-            <p className="text-muted-foreground text-center md:text-left">
-              &copy; 2015-2026 Madhyavarti Solutions. All rights reserved.
-            </p>
-            <p className="text-muted-foreground text-sm">
-              Designed & Built with <span className="text-primary">♥</span> for Enterprise Excellence
+            <div className="text-center md:text-left">
+              <p className="text-muted-foreground">
+                &copy; {new Date().getFullYear()} Madhyavarti Solutions. All rights reserved.
+              </p>
+              <p className="text-muted-foreground text-xs mt-1 opacity-75">
+                Madhyavarti Solutions Private Limited | CIN: U62099KA2024PTC187663
+              </p>
+            </div>
+            <p className="text-muted-foreground text-sm font-medium">
+              Made for India 🇮🇳
             </p>
           </div>
         </div>

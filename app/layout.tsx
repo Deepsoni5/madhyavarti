@@ -27,7 +27,7 @@ export const metadata: Metadata = {
       "Leading IT solutions company providing enterprise software, web development, and digital transformation services.",
     images: [
       {
-        url: "https://images.unsplash.com/photo-1552664730-d307ca884978?w=1200&h=630&fit=crop",
+        url: "/mfavicon.png",
         width: 1200,
         height: 630,
         alt: "Madhyavarti Solutions",
@@ -35,21 +35,9 @@ export const metadata: Metadata = {
     ],
   },
   icons: {
-    icon: [
-      {
-        url: "/icon-light-32x32.png",
-        media: "(prefers-color-scheme: light)",
-      },
-      {
-        url: "/icon-dark-32x32.png",
-        media: "(prefers-color-scheme: dark)",
-      },
-      {
-        url: "/icon.svg",
-        type: "image/svg+xml",
-      },
-    ],
-    apple: "/apple-icon.png",
+    icon: "/mfavicon.png",
+    apple: "/mfavicon.png",
+    shortcut: "/mfavicon.png",
   },
 };
 
