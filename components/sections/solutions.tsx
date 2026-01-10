@@ -1,7 +1,7 @@
 "use client"
 
 import Link from "next/link"
-import { Users, CheckCircle, Clock, Globe, BarChart3, ArrowRight } from "lucide-react"
+import { Users, CheckCircle, Clock, Globe, BarChart3, ArrowRight, Shield } from "lucide-react"
 
 export function Solutions() {
   const products = [
@@ -10,14 +10,14 @@ export function Solutions() {
       title: "Jobonix",
       subtitle: "Job Portal",
       description:
-        "A comprehensive job portal platform connecting employers with qualified candidates, streamlining the recruitment process.",
+        "An AI-powered recruitment platform that bridges the gap between talent and opportunity.",
       about:
-        "Jobonix is designed to bridge the gap between talent and opportunity, focusing on real-world skills and practical employment. Our platform helps businesses find the right people while giving job seekers a straightforward path to meaningful work.",
+        "Jobonix is an AI-powered recruitment platform that bridges the gap between talent and opportunity. It focuses on real-world skills and practical employment, enabling businesses to find the right candidates efficiently while giving job seekers a straightforward path to meaningful work.",
       features: [
-        { icon: Users, text: "Smart job matching" },
-        { icon: CheckCircle, text: "Skill-based filtering" },
-        { icon: Clock, text: "Easy application tracking" },
-        { icon: Globe, text: "Employer verification" },
+        { icon: Users, text: "Smart Job Matching" },
+        { icon: CheckCircle, text: "Skill-Based Filtering" },
+        { icon: Clock, text: "Easy Application Tracking" },
+        { icon: Globe, text: "Employer Verification" },
       ],
       color: "from-blue-600 to-cyan-600",
       badgeBg: "bg-blue-500/10",
@@ -29,18 +29,18 @@ export function Solutions() {
       link: "https://jobonix.com",
     },
     {
-      id: "loanery",
-      title: "Loanery",
-      subtitle: "Fintech",
+      id: "kucash",
+      title: "KuCash",
+      subtitle: "FinTech",
       description:
-        "An innovative fintech solution designed to simplify loan processing and connect borrowers with suitable lending options.",
+        "A technology-driven digital loan facilitation platform that enables users to apply for loans quickly through a paperless, automated process.",
       about:
-        "Loanery makes financial solutions accessible to everyone, regardless of background. We provide transparent, ethical loan mediation services that help people overcome financial hurdles with dignity and confidence.",
+        "KuCash is a technology-driven digital loan facilitation platform that enables users to apply for loans quickly through a paperless, automated process. The platform matches borrowers with suitable lenders using data-driven routing and real-time eligibility assessment, improving access to financial solutions across India.",
       features: [
-        { icon: CheckCircle, text: "Transparent terms" },
-        { icon: BarChart3, text: "Multiple lender comparison" },
-        { icon: Clock, text: "Quick pre-qualification" },
-        { icon: Users, text: "Financial guidance" },
+        { icon: CheckCircle, text: "Automated Loan Matching" },
+        { icon: Clock, text: "Paperless & Fast Processing" },
+        { icon: Users, text: "Transparent Terms" },
+        { icon: Shield, text: "Secure & Ethical Lending" },
       ],
       color: "from-emerald-600 to-teal-600",
       badgeBg: "bg-emerald-500/10",
@@ -49,7 +49,7 @@ export function Solutions() {
       iconBg: "bg-emerald-500/5",
       iconText: "text-emerald-600 dark:text-emerald-400",
       hoverGradient: "from-emerald-600/10 to-teal-600/10",
-      link: "https://loanery.com",
+      link: "https://kucash.in",
     },
   ]
 

@@ -59,8 +59,7 @@ export default function Products() {
                 </div>
                 <h2 className="text-4xl sm:text-5xl font-bold text-foreground">Jobonix</h2>
                 <p className="text-lg text-muted-foreground leading-relaxed">
-                  A comprehensive job portal platform connecting employers with qualified candidates, streamlining the
-                  recruitment process.
+                  An AI-powered recruitment platform that bridges the gap between talent and opportunity.
                 </p>
               </div>
 
@@ -69,9 +68,7 @@ export default function Products() {
                 <div>
                   <h3 className="text-xl font-bold text-foreground mb-3">About Jobonix</h3>
                   <p className="text-muted-foreground leading-relaxed">
-                    Jobonix is designed to bridge the gap between talent and opportunity, focusing on real-world skills
-                    and practical employment. Our platform helps businesses find the right people while giving job
-                    seekers a straightforward path to meaningful work.
+                    Jobonix is an AI-powered recruitment platform that bridges the gap between talent and opportunity. It focuses on real-world skills and practical employment, enabling businesses to find the right candidates efficiently while giving job seekers a straightforward path to meaningful work.
                   </p>
                 </div>
               </div>
@@ -106,7 +103,7 @@ export default function Products() {
             </div>
           </div>
 
-          {/* Loanery */}
+          {/* KuCash */}
           <div className="group relative rounded-3xl overflow-hidden border border-border bg-card hover:border-primary/50 transition-all duration-300 hover:shadow-2xl hover:shadow-primary/10">
             <div className="absolute inset-0 bg-gradient-to-br from-emerald-600/10 to-teal-600/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
 
@@ -116,21 +113,18 @@ export default function Products() {
                 <div className="inline-flex px-4 py-2 rounded-full bg-emerald-500/10 border border-emerald-500/30">
                   <span className="text-sm font-semibold text-emerald-600 dark:text-emerald-400">Fintech</span>
                 </div>
-                <h2 className="text-4xl sm:text-5xl font-bold text-foreground">Loanery</h2>
+                <h2 className="text-4xl sm:text-5xl font-bold text-foreground">KuCash</h2>
                 <p className="text-lg text-muted-foreground leading-relaxed">
-                  An innovative fintech solution designed to simplify loan processing and connect borrowers with
-                  suitable lending options.
+                  A technology-driven digital loan facilitation platform that enables users to apply for loans quickly through a paperless, automated process.
                 </p>
               </div>
 
               {/* About Section */}
               <div className="space-y-6 mb-8 pb-8 border-b border-border">
                 <div>
-                  <h3 className="text-xl font-bold text-foreground mb-3">About Loanery</h3>
+                  <h3 className="text-xl font-bold text-foreground mb-3">About KuCash</h3>
                   <p className="text-muted-foreground leading-relaxed">
-                    Loanery makes financial solutions accessible to everyone, regardless of background. We provide
-                    transparent, ethical loan mediation services that help people overcome financial hurdles with
-                    dignity and confidence.
+                    KuCash is a technology-driven digital loan facilitation platform that enables users to apply for loans quickly through a paperless, automated process. The platform matches borrowers with suitable lenders using data-driven routing and real-time eligibility assessment, improving access to financial solutions across India.
                   </p>
                 </div>
               </div>
@@ -154,7 +148,7 @@ export default function Products() {
               {/* CTA */}
               <div className="flex flex-col sm:flex-row gap-4">
                 <Link
-                  href="https://loanery.com"
+                  href="https://kucash.in"
                   target="_blank"
                   className="px-6 py-3 rounded-full bg-emerald-600 text-white font-semibold hover:bg-emerald-700 transition-colors flex items-center justify-center gap-2 hover:shadow-lg hover:shadow-emerald-600/30"
                 >

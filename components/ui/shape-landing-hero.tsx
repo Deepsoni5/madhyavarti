@@ -1,6 +1,6 @@
 "use client"
 
-import { motion } from "framer-motion"
+import { motion, type Variants } from "framer-motion"
 import { Circle } from "lucide-react"
 import { cn } from "@/lib/utils"
 
@@ -75,13 +75,21 @@ function HeroGeometric({
   title1 = "Ready to Transform",
   title2 = "Your Business?",
   description = "Madhyavarti Solutions delivers cutting-edge IT services and digital transformation built for businesses ready to innovate and scale exponentially.",
+  button1Text = "Get Started Today",
+  button1Link = "/contact",
+  button2Text = "Explore Services",
+  button2Link = "#our-services",
 }: {
   badge?: string
   title1?: string
   title2?: string
   description?: string
+  button1Text?: string
+  button1Link?: string
+  button2Text?: string
+  button2Link?: string
 }) {
-  const fadeUpVariants = {
+  const fadeUpVariants: Variants = {
     hidden: { opacity: 0, y: 30 },
     visible: (i: number) => ({
       opacity: 1,
@@ -160,7 +168,7 @@ function HeroGeometric({
 
           <motion.div custom={1} variants={fadeUpVariants} initial="hidden" animate="visible">
             <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-bold mb-6 md:mb-8 tracking-tight text-center">
-              <span className="bg-clip-text text-transparent bg-gradient-to-b from-foreground dark:from-white to-foreground/80 dark:to-white/80">
+              <span className="bg-clip-text text-transparent bg-gradient-to-b from-foreground dark:from-white to-foreground/80 dark:to-white/80 whitespace-nowrap">
                 {title1}
               </span>
               <br />
@@ -188,16 +196,16 @@ function HeroGeometric({
             className="flex flex-col sm:flex-row gap-4 justify-center items-center"
           >
             <a
-              href="/contact"
+              href={button1Link}
               className="px-8 py-4 rounded-full bg-primary text-primary-foreground font-semibold hover:bg-primary/90 hover:shadow-lg hover:shadow-primary/30 hover:-translate-y-1 transition-all duration-300 text-center inline-flex items-center justify-center"
             >
-              Get Started Today
+              {button1Text}
             </a>
             <a
-              href="#our-services"
+              href={button2Link}
               className="px-8 py-4 rounded-full border-2 border-primary text-primary font-semibold hover:bg-primary/10 hover:-translate-y-1 transition-all duration-300 text-center inline-flex items-center justify-center"
             >
-              Explore Services
+              {button2Text}
             </a>
           </motion.div>
 

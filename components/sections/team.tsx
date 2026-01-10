@@ -1,45 +1,38 @@
 "use client"
 
-import { Linkedin, Mail, ArrowRight } from "lucide-react"
+"use client"
+
+import { Linkedin, Mail, Quote } from "lucide-react"
+import { motion } from "framer-motion"
 
 export function Team() {
-  const teamMembers = [
+  const leaders = [
     {
-      name: "Rajesh Kumar",
-      role: "Chief Executive Officer",
-      image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=400&fit=crop&q=80",
-      bio: "15+ years in enterprise IT solutions",
-      color: "from-blue-500/20 to-cyan-500/20",
+      name: "Balakrishna Cherukuri",
+      role: "Founder",
+      qualification: "M.Tech (IT) & MBA (HR)",
+      image: "/pf2.jpeg",
+      experience: "15+ Years Experience",
+      bio: "Backed with 15+ years of hands-on entrepreneurial and Finance experience, he has built and operated multiple ventures across foodtech, HR tech, staffing, and technology-driven industries. Known for his clarity, sharp decision-making, and team-building abilities, he drives KuCash with a clear purpose — to create a transparent global ecosystem where trust becomes the core of lending.",
+      color: "from-blue-600 to-cyan-600",
     },
     {
-      name: "Priya Sharma",
-      role: "Chief Technology Officer",
-      image: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=400&h=400&fit=crop&q=80",
-      bio: "Expert in cloud architecture and DevOps",
-      color: "from-purple-500/20 to-pink-500/20",
-    },
-    {
-      name: "Amit Patel",
-      role: "Head of Solutions",
-      image: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=400&h=400&fit=crop&q=80",
-      bio: "Specializes in digital transformation",
-      color: "from-green-500/20 to-emerald-500/20",
-    },
-    {
-      name: "Neha Verma",
-      role: "Lead Developer",
-      image: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=400&h=400&fit=crop&q=80",
-      bio: "Full-stack development and innovation",
-      color: "from-orange-500/20 to-red-500/20",
+      name: "Kiran Biradar",
+      role: "Co-Founder",
+      qualification: "B.Sc (CS)",
+      image: "/pf1.jpeg",
+      experience: "5+ Years Experience in Finance",
+      bio: "With over 5 years of solid experience in Finance, he brings a robust entrepreneurial and operational background spanning the fintech, fashion-tech, and manpower industries. He possesses an exceptional ability to understand borrower psychology and align large teams toward a common mission of financial inclusion. His practical experience in managing complex operations makes him an ideal counterpart to the founder, ensuring KuCash builds a scalable, people-first platform.",
+      color: "from-emerald-600 to-teal-600",
     },
   ]
 
   return (
     <section className="relative py-24 px-4 sm:px-6 lg:px-8 bg-background overflow-hidden">
-      {/* Background accent */}
+      {/* Background decoration */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        <div className="absolute top-1/3 left-0 w-96 h-96 bg-primary/3 rounded-full blur-3xl"></div>
-        <div className="absolute bottom-0 right-0 w-96 h-96 bg-primary/3 rounded-full blur-3xl"></div>
+        <div className="absolute top-1/4 right-0 w-[500px] h-[500px] bg-primary/5 rounded-full blur-[100px]"></div>
+        <div className="absolute bottom-0 left-0 w-[500px] h-[500px] bg-accent/5 rounded-full blur-[100px]"></div>
       </div>
 
       <div className="relative z-10 max-w-7xl mx-auto">
@@ -47,70 +40,87 @@ export function Team() {
         <div className="text-center mb-20 space-y-4">
           <div className="inline-flex">
             <div className="px-4 py-2 rounded-full bg-primary/10 border border-primary/20">
-              <p className="text-sm font-semibold text-primary">Meet the Team</p>
+              <p className="text-sm font-semibold text-primary">Our Leadership</p>
             </div>
           </div>
-          <h2 className="text-5xl sm:text-6xl font-bold text-foreground">Our Leadership</h2>
+          <h2 className="text-4xl md:text-5xl font-bold text-foreground">Meet Our Leadership</h2>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-            Visionary leaders driving innovation and excellence in enterprise transformation.
+            The visionaries behind KuCash's mission to transform lending in India
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-          {teamMembers.map((member, i) => (
-            <div
-              key={i}
-              className="group relative rounded-2xl overflow-hidden bg-card border border-primary/20 hover:border-primary/50 transition-all duration-500 hover:shadow-xl hover:shadow-primary/10"
+        {/* Leaders Grid */}
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-10">
+          {leaders.map((leader, index) => (
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: index * 0.2 }}
+              key={index}
+              className="group relative rounded-3xl bg-card border border-border overflow-hidden hover:shadow-2xl hover:shadow-primary/5 transition-all duration-500"
             >
-              {/* Image with animated overlay */}
-              <div className="relative overflow-hidden h-96 bg-gradient-to-br from-primary/5 to-accent/5">
-                <img
-                  src={member.image || "/placeholder.svg"}
-                  alt={member.name}
-                  className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
-                />
-                <div
-                  className={`absolute inset-0 bg-gradient-to-t ${member.color} group-hover:opacity-40 opacity-20 transition-opacity duration-300`}
-                ></div>
-              </div>
+              {/* Top Gradient Bar */}
+              <div className={`h-2 w-full bg-gradient-to-r ${leader.color}`} />
 
-              {/* Content with reveal animation */}
-              <div className="p-6 space-y-4">
-                {/* Name with slide effect */}
-                <div className="space-y-2 overflow-hidden">
-                  <h3 className="text-lg font-bold text-foreground group-hover:text-primary transition-colors duration-300">
-                    {member.name}
-                  </h3>
-                  <p className="text-sm font-semibold text-primary">{member.role}</p>
+              <div className="p-8 sm:p-10 flex flex-col md:flex-row gap-8 items-start">
+
+                {/* Image Section */}
+                <div className="w-full md:w-1/3 flex-shrink-0">
+                  <div className="relative aspect-[4/5] rounded-2xl overflow-hidden shadow-lg border-2 border-primary/10 group-hover:border-primary/30 transition-colors">
+                    <img
+                      src={leader.image}
+                      alt={leader.name}
+                      className="absolute inset-0 w-full h-full object-cover object-top transition-transform duration-700 group-hover:scale-105"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-60" />
+
+                    {/* Qualification tag on image */}
+                    <div className="absolute bottom-3 left-3 right-3 text-center">
+                      <span className="inline-block px-3 py-1 bg-white/10 backdrop-blur-md border border-white/20 rounded-full text-xs font-medium text-white shadow-sm">
+                        {leader.qualification}
+                      </span>
+                    </div>
+                  </div>
+
+                  {/* Experience Badge under image on desktop, or beside on mobile */}
+                  <div className="mt-4 text-center">
+                    <span className={`inline-block px-4 py-1.5 rounded-full text-xs font-bold bg-gradient-to-r ${leader.color} text-white shadow-md`}>
+                      {leader.experience}
+                    </span>
+                  </div>
                 </div>
 
-                {/* Bio with fade effect */}
-                <p className="text-sm text-muted-foreground leading-relaxed opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                  {member.bio}
-                </p>
+                {/* Content Section */}
+                <div className="flex-grow space-y-4">
+                  <div>
+                    <h3 className="text-2xl font-bold text-foreground group-hover:text-primary transition-colors">
+                      {leader.name}
+                    </h3>
+                    <p className={`text-lg font-medium bg-gradient-to-r ${leader.color} bg-clip-text text-transparent`}>
+                      {leader.role}
+                    </p>
+                  </div>
 
-                {/* Social links with animated appearance */}
-                <div className="flex gap-3 pt-4 border-t border-primary/10 opacity-0 group-hover:opacity-100 transition-all duration-300">
-                  <button
-                    className="p-2 rounded-lg bg-primary/10 hover:bg-primary/20 transition-all duration-300 group/btn"
-                    aria-label="LinkedIn profile"
-                  >
-                    <Linkedin className="w-4 h-4 text-primary" />
-                  </button>
-                  <button
-                    className="p-2 rounded-lg bg-primary/10 hover:bg-primary/20 transition-all duration-300 group/btn"
-                    aria-label="Email"
-                  >
-                    <Mail className="w-4 h-4 text-primary" />
-                  </button>
+                  <div className="relative">
+                    <Quote className="absolute -top-2 -left-3 w-8 h-8 text-primary/10 -z-10 transform -scale-x-100" />
+                    <p className="text-muted-foreground leading-relaxed italic relative z-10 text-sm sm:text-base">
+                      "{leader.bio}"
+                    </p>
+                  </div>
+
+                  {/* Social/Contact placeholders - Optional */}
+                  <div className="pt-6 flex gap-3 border-t border-border mt-auto">
+                    <button className="p-2 rounded-full bg-primary/5 text-primary hover:bg-primary hover:text-white transition-all">
+                      <Linkedin className="w-5 h-5" />
+                    </button>
+                    <button className="p-2 rounded-full bg-primary/5 text-primary hover:bg-primary hover:text-white transition-all">
+                      <Mail className="w-5 h-5" />
+                    </button>
+                  </div>
                 </div>
               </div>
-
-              {/* Arrow indicator on hover */}
-              <div className="absolute top-4 right-4 p-2 rounded-lg bg-primary/10 opacity-0 group-hover:opacity-100 transition-all duration-300">
-                <ArrowRight className="w-4 h-4 text-primary" />
-              </div>
-            </div>
+            </motion.div>
           ))}
         </div>
       </div>

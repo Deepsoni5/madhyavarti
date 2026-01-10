@@ -6,44 +6,44 @@ export function Services() {
   const services = [
     {
       icon: Code2,
-      title: "Custom Software Development",
+      title: "Platform & Product Engineering",
       description:
-        "Enterprise-grade solutions built specifically for your unique business needs with cutting-edge technology.",
+        "Design and develop enterprise-grade digital platforms, enabling seamless scalability and robust performance for our products like KuCash and Jobonix.",
       gradient: "from-blue-500/20 to-blue-600/10",
       color: "text-blue-500",
     },
     {
       icon: Smartphone,
-      title: "Web & Mobile Applications",
-      description: "Modern, responsive applications that engage users and drive measurable business results.",
+      title: "Web & Mobile Application Development",
+      description: "Create responsive, user-centric applications optimized for engagement, efficiency, and platform-wide performance.",
       gradient: "from-purple-500/20 to-purple-600/10",
       color: "text-purple-500",
     },
     {
-      icon: Zap,
-      title: "Digital Transformation",
-      description: "Modernize your operations with next-gen technology and strategic implementation expertise.",
+      icon: Lightbulb,
+      title: "Digital Transformation Enablement",
+      description: "Modernize workflows and business processes through automation, intelligent systems, and data-driven decision-making.",
       gradient: "from-amber-500/20 to-amber-600/10",
       color: "text-amber-500",
     },
     {
       icon: Cloud,
-      title: "Cloud Solutions & Migration",
-      description: "Secure, scalable cloud infrastructure with seamless migration and ongoing optimization.",
+      title: "Cloud Architecture & Scalability",
+      description: "Implement secure, scalable, cloud-based infrastructure to support high-volume operations and pan-India growth.",
       gradient: "from-cyan-500/20 to-cyan-600/10",
       color: "text-cyan-500",
     },
     {
       icon: BarChart3,
-      title: "Data & Analytics",
-      description: "Leverage data-driven insights to make informed decisions and unlock hidden business potential.",
+      title: "Data Analytics & Insights",
+      description: "Leverage analytics to drive smarter decisions, improve operational efficiency, and enhance platform performance.",
       gradient: "from-emerald-500/20 to-emerald-600/10",
       color: "text-emerald-500",
     },
     {
-      icon: Lightbulb,
-      title: "IT Consulting & Strategy",
-      description: "Expert guidance on technology strategy, architecture design, and comprehensive implementation.",
+      icon: Zap,
+      title: "Automation & Workflow Orchestration",
+      description: "Integrate automated processes and digital workflows to reduce manual intervention, improve speed, and maintain compliance.",
       gradient: "from-rose-500/20 to-rose-600/10",
       color: "text-rose-500",
     },
@@ -65,9 +65,13 @@ export function Services() {
               <p className="text-sm font-semibold text-primary">Our Expertise</p>
             </div>
           </div>
-          <h2 className="text-5xl sm:text-6xl font-bold text-foreground">Our Services</h2>
+          <h2 className="text-5xl sm:text-6xl font-bold text-foreground">Our Technology Capabilities</h2>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto leading-relaxed">
-            Comprehensive IT solutions designed to accelerate your business growth and digital transformation journey.
+            Madhyavarti Solutions leverages cutting-edge technology and engineering expertise to develop and scale innovative digital platforms across FinTech and HR-Tech domains.
+            <br className="hidden md:block" />
+            <span className="mt-2 block text-lg">
+              Our capabilities enable us to build scalable, automated, and data-driven systems that improve processes, enhance efficiency, and deliver measurable impact.
+            </span>
           </p>
         </div>
 

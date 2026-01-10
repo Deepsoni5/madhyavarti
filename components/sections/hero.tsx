@@ -5,10 +5,14 @@ import { HeroGeometric } from "@/components/ui/shape-landing-hero"
 export function Hero() {
   return (
     <HeroGeometric
-      badge="Transforming Businesses Since 2015"
-      title1="Ready to Transform"
-      title2="Your Business?"
-      description="Madhyavarti Solutions delivers cutting-edge IT services and digital transformation built for businesses ready to innovate and scale exponentially."
+      badge="Building Technology-Driven Digital Platforms Since 2015"
+      title1="Powering Innovation"
+      title2="Across FinTech and HR-Tech"
+      description="Madhyavarti Solutions is a technology-focused company that designs, builds, and operates scalable digital platforms aimed at improving financial access, employment outcomes, and business efficiency through automation, artificial intelligence, and data-driven systems."
+      button1Text="Explore Our Platforms"
+      button1Link="#our-services"
+      button2Text="Learn About Our Technology"
+      button2Link="#innovation-focus"
     />
   )
 }

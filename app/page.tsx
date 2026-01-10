@@ -1,5 +1,6 @@
 import { Header } from "@/components/header"
 import { Hero } from "@/components/sections/hero"
+import { InnovationFocus } from "@/components/sections/innovation-focus"
 import { Services } from "@/components/sections/services"
 import { Stats } from "@/components/sections/stats"
 import { About } from "@/components/sections/about"
@@ -14,6 +15,7 @@ export default function Home() {
     <main className="min-h-screen bg-background">
       <Header />
       <Hero />
+      <InnovationFocus />
       <Services />
       <Stats />
       <About />

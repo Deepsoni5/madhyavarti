@@ -16,16 +16,16 @@ export function CTA() {
         <div className="rounded-3xl border-2 border-primary bg-card p-12 sm:p-16 lg:p-20 space-y-8">
           {/* Heading */}
           <div className="space-y-4 text-center">
-            <h2 className="text-5xl sm:text-6xl lg:text-7xl font-bold text-foreground leading-tight">
-              Ready to Transform Your Business 10x Better?
+            <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-foreground leading-tight">
+              Transform Businesses Through Technology and Innovation
             </h2>
-            <p className="text-xl sm:text-2xl text-muted-foreground max-w-2xl mx-auto">
-              Join 500+ global companies that have accelerated their growth with Madhyavarti Solutions.
+            <p className="text-xl sm:text-2xl text-muted-foreground max-w-3xl mx-auto">
+              Join the growing network of users and businesses that have benefited from Madhyavarti Solutions’ digital platforms, creating measurable impact through technology-driven solutions.
             </p>
           </div>
 
           {/* CTA Buttons */}
-          <div className="flex flex-col sm:flex-row gap-4 justify-center pt-4">
+          <div className="flex flex-col sm:flex-row gap-4 justify-center pt-8">
             <Link
               href="/contact"
               className="group px-8 py-4 rounded-full bg-primary text-primary-foreground font-bold flex items-center justify-center gap-2 hover:bg-primary/90 hover:shadow-lg hover:shadow-primary/30 hover:-translate-y-1 transition-all duration-300 text-lg"
@@ -37,27 +37,27 @@ export function CTA() {
               href="#our-services"
               className="px-8 py-4 rounded-full border-2 border-primary text-primary font-bold hover:bg-primary/10 hover:-translate-y-1 transition-all duration-300 text-center text-lg"
             >
-              Explore Services
+              Explore Our Platforms
             </Link>
           </div>
 
           {/* Stats row */}
-          <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 pt-8 border-t border-border/50">
-            <div className="text-center">
-              <p className="text-2xl sm:text-3xl font-bold text-primary">500+</p>
-              <p className="text-xs sm:text-sm text-muted-foreground mt-1">Clients Worldwide</p>
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-8 pt-12 border-t border-border/50">
+            <div className="text-center space-y-2">
+              <p className="text-3xl sm:text-4xl font-bold text-primary">500+</p>
+              <p className="text-sm text-muted-foreground">Users supported through Jobonix and KuCash</p>
             </div>
-            <div className="text-center">
-              <p className="text-2xl sm:text-3xl font-bold text-primary">1000+</p>
-              <p className="text-xs sm:text-sm text-muted-foreground mt-1">Projects</p>
+            <div className="text-center space-y-2">
+              <p className="text-3xl sm:text-4xl font-bold text-primary">100+</p>
+              <p className="text-sm text-muted-foreground">Transactions & Matches processed on our platforms</p>
             </div>
-            <div className="text-center">
-              <p className="text-2xl sm:text-3xl font-bold text-primary">9+</p>
-              <p className="text-xs sm:text-sm text-muted-foreground mt-1">Years</p>
+            <div className="text-center space-y-2">
+              <p className="text-3xl sm:text-4xl font-bold text-primary">15+</p>
+              <p className="text-sm text-muted-foreground">Years of Technology Innovation driving scalable solutions</p>
             </div>
-            <div className="text-center">
-              <p className="text-2xl sm:text-3xl font-bold text-primary">99%</p>
-              <p className="text-xs sm:text-sm text-muted-foreground mt-1">Satisfaction</p>
+            <div className="text-center space-y-2">
+              <p className="text-3xl sm:text-4xl font-bold text-primary">99%</p>
+              <p className="text-sm text-muted-foreground">Secure & Compliant Operations across platforms</p>
             </div>
           </div>
         </div>

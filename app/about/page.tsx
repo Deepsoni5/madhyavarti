@@ -2,6 +2,7 @@ import type { Metadata } from "next"
 import Link from "next/link"
 import { Header } from "@/components/header"
 import { Footer } from "@/components/footer"
+import { Team } from "@/components/sections/team"
 import { Target, Users, Zap, Heart, TrendingUp } from "lucide-react"
 
 export const metadata: Metadata = {
@@ -142,6 +143,9 @@ export default function About() {
         </div>
       </section>
 
+      {/* Leadership */}
+      <Team />
+
       {/* Achievements */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 border-b border-border">
         <div className="max-w-5xl mx-auto">
@@ -181,10 +185,9 @@ export default function About() {
               <div className="p-3 rounded-lg bg-emerald-500/10 w-fit">
                 <Heart className="w-6 h-6 text-emerald-600 dark:text-emerald-400" />
               </div>
-              <h3 className="text-2xl font-bold text-foreground">Ethical Loan Mediation (Loanery)</h3>
+              <h3 className="text-2xl font-bold text-foreground">Ethical Loan Mediation (KuCash)</h3>
               <p className="text-muted-foreground leading-relaxed">
-                We guide people toward responsible financial solutions through transparent loan mediation, helping them
-                overcome challenges with dignity and confidence.
+                A technology-driven digital loan facilitation platform that enables users to apply for loans quickly through a paperless, automated process, improving access to financial solutions.
               </p>
             </div>
           </div>
