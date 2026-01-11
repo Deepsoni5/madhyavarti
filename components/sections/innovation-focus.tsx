@@ -39,7 +39,7 @@ export function InnovationFocus() {
                             <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75"></span>
                             <span className="relative inline-flex rounded-full h-2 w-2 bg-primary"></span>
                         </span>
-                        <p className="text-sm font-semibold text-primary">DPIIT Certified Innovation</p>
+                        <p className="text-sm font-semibold text-primary">Govt. Recognized Tech Startup</p>
                     </div>
 
                     <h2 className="text-4xl md:text-5xl font-bold text-foreground tracking-tight">

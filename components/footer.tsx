@@ -107,7 +107,12 @@ export function Footer() {
                 </li>
                 <li className="flex gap-3">
                   <MapPin className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
-                  <span className="text-muted-foreground">Bangalore, India</span>
+                  <span className="text-muted-foreground text-sm leading-relaxed">
+                    NO:8, K.NO.13-3, 28TH CROSS,<br />
+                    HULIMAVU MAIN ROAD, Hulimavu,<br />
+                    Bangalore South, Bangalore - 560076,<br />
+                    Karnataka, India
+                  </span>
                 </li>
               </ul>
             </div>
