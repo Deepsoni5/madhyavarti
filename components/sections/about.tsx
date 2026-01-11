@@ -7,7 +7,7 @@ export function About() {
             <h2 className="text-4xl sm:text-5xl font-bold text-foreground mb-6">About Madhyavarti Solutions</h2>
             <div className="space-y-4 text-lg text-muted-foreground mb-8 leading-relaxed">
               <p>
-                Founded with a vision to build innovative technology platforms that solve real-world challenges, Madhyavarti Solutions has been developing digital-first solutions across India since 2015.
+                Founded with a vision to build innovative technology platforms that solve real-world challenges, Madhyavarti Solutions has been developing digital-first solutions across India since 2024.
               </p>
               <p>
                 Our team of engineers and product specialists collaborates to create scalable, automated, and data-driven platforms that enhance financial accessibility, streamline recruitment, and enable sustainable business growth.

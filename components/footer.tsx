@@ -30,7 +30,7 @@ export function Footer() {
               </div>
               <p className="text-muted-foreground leading-relaxed mb-6">
                 Leading IT solutions provider transforming businesses through cutting-edge technology and innovation
-                since 2015.
+                since 2024.
               </p>
               <div className="flex gap-4">
                 <a href="#" className="p-2 rounded-lg bg-primary/10 hover:bg-primary/20 transition-colors">
