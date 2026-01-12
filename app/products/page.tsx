@@ -2,7 +2,7 @@ import type { Metadata } from "next"
 import Link from "next/link"
 import { Header } from "@/components/header"
 import { Footer } from "@/components/footer"
-import { ArrowRight, CheckCircle, Globe, BarChart3, Users, Clock } from "lucide-react"
+import { ArrowRight, CheckCircle, Globe, BarChart3, Users, Clock, TrendingUp, Building2, Briefcase, Shield } from "lucide-react"
 
 export const metadata: Metadata = {
   title: "Our Products | Madhyavarti Solutions",
@@ -10,7 +10,7 @@ export const metadata: Metadata = {
     "Discover Jobonix and Loanery - innovative platforms connecting talent with opportunity and providing ethical financial solutions.",
   openGraph: {
     title: "Our Products | Madhyavarti Solutions",
-    description: "Jobonix - Job Portal | Loanery - Fintech Solutions",
+    description: "Jobonix - Job Portal | Loanery - Fintech Solutions | MerzVia - M&A Advisory",
   },
 }
 
@@ -27,6 +27,13 @@ export default function Products() {
     { icon: BarChart3, text: "Multiple lender comparison" },
     { icon: Clock, text: "Quick pre-qualification" },
     { icon: Users, text: "Financial guidance" },
+  ]
+
+  const merzviaFeatures = [
+    { icon: TrendingUp, text: "Value optimization" },
+    { icon: Briefcase, text: "Strategic advisory" },
+    { icon: Building2, text: "Global sector reach" },
+    { icon: Shield, text: "Absolute discretion" },
   ]
 
   return (
@@ -46,7 +53,7 @@ export default function Products() {
         </div>
 
         {/* Products Grid */}
-        <div className="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12">
+        <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {/* Jobonix */}
           <div className="group relative rounded-3xl overflow-hidden border border-border bg-card hover:border-primary/50 transition-all duration-300 hover:shadow-2xl hover:shadow-primary/10">
             <div className="absolute inset-0 bg-gradient-to-br from-blue-600/10 to-cyan-600/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
@@ -158,6 +165,62 @@ export default function Products() {
               </div>
             </div>
           </div>
+
+          {/* MerzVia */}
+          <div className="group relative rounded-3xl overflow-hidden border border-border bg-card hover:border-primary/50 transition-all duration-300 hover:shadow-2xl hover:shadow-primary/10">
+            <div className="absolute inset-0 bg-gradient-to-br from-violet-600/10 to-indigo-600/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+
+            <div className="relative z-10 p-8 sm:p-12 h-full flex flex-col justify-between">
+              {/* Header */}
+              <div className="space-y-4 mb-8">
+                <div className="inline-flex px-4 py-2 rounded-full bg-violet-500/10 border border-violet-500/30">
+                  <span className="text-sm font-semibold text-violet-600 dark:text-violet-400">M&A Advisory</span>
+                </div>
+                <h2 className="text-4xl sm:text-5xl font-bold text-foreground">MerzVia</h2>
+                <p className="text-lg text-muted-foreground leading-relaxed">
+                  A premier Mergers & Acquisitions firm building ambitious corporate legacies through strategic artistry.
+                </p>
+              </div>
+
+              {/* About Section */}
+              <div className="space-y-6 mb-8 pb-8 border-b border-border">
+                <div>
+                  <h3 className="text-xl font-bold text-foreground mb-3">About MerzVia</h3>
+                  <p className="text-muted-foreground leading-relaxed">
+                    MerzVia specializes in high-stakes transactions and strategic advisory, combining deep financial expertise with a refined sense of strategic artistry to unlock maximum enterprise value across Technology, Healthcare, Manufacturing, and Renewable Energy sectors.
+                  </p>
+                </div>
+              </div>
+
+              {/* Features */}
+              <div className="space-y-4 mb-8">
+                <h3 className="text-xl font-bold text-foreground">Key Features</h3>
+                <div className="grid grid-cols-2 gap-3">
+                  {merzviaFeatures.map((feature, idx) => {
+                    const Icon = feature.icon
+                    return (
+                      <div key={idx} className="flex items-center gap-3 p-3 rounded-lg bg-violet-500/5">
+                        <Icon className="w-5 h-5 text-violet-600 dark:text-violet-400 flex-shrink-0" />
+                        <span className="text-sm font-medium text-foreground">{feature.text}</span>
+                      </div>
+                    )
+                  })}
+                </div>
+              </div>
+
+              {/* CTA */}
+              <div className="flex flex-col sm:flex-row gap-4">
+                <Link
+                  href="https://merzvia.com"
+                  target="_blank"
+                  className="px-6 py-3 rounded-full bg-violet-600 text-white font-semibold hover:bg-violet-700 transition-colors flex items-center justify-center gap-2 hover:shadow-lg hover:shadow-violet-600/30"
+                >
+                  Visit Website
+                  <ArrowRight className="w-4 h-4" />
+                </Link>
+              </div>
+            </div>
+          </div>
         </div>
 
         {/* Why Our Products */}
@@ -208,7 +271,7 @@ export default function Products() {
         <div className="max-w-4xl mx-auto mt-24 pt-24 border-t border-border text-center space-y-6">
           <h2 className="text-4xl font-bold text-foreground">Ready to Experience Innovation?</h2>
           <p className="text-lg text-muted-foreground">
-            Explore Jobonix and Loanery today to see how we're transforming opportunities.
+            Explore Jobonix, Loanery, and MerzVia today to see how we're transforming opportunities.
           </p>
           <Link
             href="/contact"

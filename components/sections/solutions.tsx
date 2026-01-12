@@ -1,7 +1,7 @@
 "use client"
 
 import Link from "next/link"
-import { Users, CheckCircle, Clock, Globe, BarChart3, ArrowRight, Shield } from "lucide-react"
+import { Users, CheckCircle, Clock, Globe, BarChart3, ArrowRight, Shield, TrendingUp, Building2, Briefcase } from "lucide-react"
 
 export function Solutions() {
   const products = [
@@ -51,6 +51,29 @@ export function Solutions() {
       hoverGradient: "from-emerald-600/10 to-teal-600/10",
       link: "https://kucash.in",
     },
+    {
+      id: "merzvia",
+      title: "MerzVia",
+      subtitle: "M&A Advisory",
+      description:
+        "A premier Mergers & Acquisitions firm building ambitious corporate legacies through strategic artistry.",
+      about:
+        "MerzVia is a premier Mergers & Acquisitions firm that serves as the architectural force behind the world's most ambitious corporate legacies. Specializing in high-stakes transactions and strategic advisory, we combine deep financial expertise with a refined sense of strategic artistry to unlock maximum enterprise value.",
+      features: [
+        { icon: TrendingUp, text: "High-Stakes Transactions" },
+        { icon: Briefcase, text: "Strategic Advisory" },
+        { icon: Building2, text: "Sector Expertise" },
+        { icon: Shield, text: "Absolute Discretion" },
+      ],
+      color: "from-violet-600 to-indigo-600",
+      badgeBg: "bg-violet-500/10",
+      badgeBorder: "border-violet-500/30",
+      badgeText: "text-violet-600 dark:text-violet-400",
+      iconBg: "bg-violet-500/5",
+      iconText: "text-violet-600 dark:text-violet-400",
+      hoverGradient: "from-violet-600/10 to-indigo-600/10",
+      link: "https://merzvia.com",
+    },
   ]
 
   return (
@@ -75,7 +98,7 @@ export function Solutions() {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {products.map((product) => (
             <div
               key={product.id}
