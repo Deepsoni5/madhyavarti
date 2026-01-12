@@ -41,17 +41,23 @@ function Button({
   variant,
   size,
   asChild = false,
+  type,
   ...props
 }: React.ComponentProps<'button'> &
   VariantProps<typeof buttonVariants> & {
     asChild?: boolean
+    type?: 'button' | 'submit' | 'reset'
   }) {
   const Comp = asChild ? Slot : 'button'
+
+  // Default to 'button' to avoid unintended form submissions when used inside forms
+  const buttonType = type ?? 'button'
 
   return (
     <Comp
       data-slot="button"
       className={cn(buttonVariants({ variant, size, className }))}
+      type={buttonType}
       {...props}
     />
   )

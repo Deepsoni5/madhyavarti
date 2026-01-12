@@ -43,6 +43,9 @@ export function Header() {
           <Link href="/" className="text-foreground hover:text-primary transition-colors font-medium">
             Home
           </Link>
+          <Link href="/esign" className="text-foreground hover:text-primary transition-colors font-medium">
+            E-Sign
+          </Link>
           <Link href="/about" className="text-foreground hover:text-primary transition-colors font-medium">
             About Us
           </Link>
@@ -58,11 +61,14 @@ export function Header() {
           <ThemeToggle />
         </div>
 
-        {isOpen && (
+          {isOpen && (
           <div className="absolute top-16 left-0 right-0 bg-card border-b border-border p-4 md:hidden z-50">
             <div className="flex flex-col gap-4">
               <Link href="/" className="text-foreground hover:text-primary transition-colors font-medium">
                 Home
+              </Link>
+              <Link href="/esign" className="text-foreground hover:text-primary transition-colors font-medium">
+                E-Sign
               </Link>
               <Link href="/about" className="text-foreground hover:text-primary transition-colors font-medium">
                 About Us
