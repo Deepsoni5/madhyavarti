@@ -59,7 +59,6 @@ export default function LoginPage() {
                 id="email"
                 name="email"
                 type="email"
-                placeholder="admin@madhyavarti.com"
                 required
               />
             </div>
