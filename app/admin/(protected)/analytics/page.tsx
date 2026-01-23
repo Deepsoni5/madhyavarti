@@ -18,6 +18,7 @@ import { Eye, Users, Smartphone, Monitor, Globe, MapPin } from 'lucide-react'
 import { Badge } from '@/components/ui/badge'
 import { format } from 'date-fns'
 import { RefreshButton } from '@/components/admin/refresh-button'
+import { ActivityTable } from '@/components/admin/activity-table'
 
 export default async function AnalyticsPage() {
   const data = await getAnalyticsData()
@@ -162,45 +163,11 @@ export default async function AnalyticsPage() {
         <CardHeader>
           <CardTitle>Recent Activity</CardTitle>
           <CardDescription>
-            Real-time log of the latest 100 visits.
+            Real-time log of the latest visits.
           </CardDescription>
         </CardHeader>
         <CardContent>
-          <Table>
-            <TableHeader>
-              <TableRow>
-                <TableHead>Page</TableHead>
-                <TableHead className="hidden sm:table-cell">Device</TableHead>
-                <TableHead className="hidden md:table-cell">Location</TableHead>
-                <TableHead className="text-right">Time</TableHead>
-              </TableRow>
-            </TableHeader>
-            <TableBody>
-              {data.recentVisits.slice(0, 100).map((visit: any, i: number) => (
-                <TableRow key={i}>
-                  <TableCell className="font-medium">
-                    <span className="truncate block max-w-[200px] sm:max-w-md" title={visit.page_path}>
-                      {visit.page_path}
-                    </span>
-                  </TableCell>
-                  <TableCell className="hidden sm:table-cell text-xs text-muted-foreground">
-                    {visit.user_agent.includes('Mobile') ? 'Mobile' : 'Desktop'}
-                  </TableCell>
-                  <TableCell className="hidden md:table-cell text-xs text-muted-foreground">
-                    <div className="flex items-center gap-1">
-                      <MapPin className="h-3 w-3" />
-                      <span className="truncate max-w-[150px]" title={`${visit.city || ''}, ${visit.country || ''}`}>
-                          {visit.country === 'Unknown' ? 'Unknown' : `${visit.city || ''}, ${visit.country}`}
-                      </span>
-                    </div>
-                  </TableCell>
-                  <TableCell className="text-right text-xs text-muted-foreground">
-                    {format(new Date(visit.created_at), 'MMM d, h:mm a')}
-                  </TableCell>
-                </TableRow>
-              ))}
-            </TableBody>
-          </Table>
+          <ActivityTable visits={data.recentVisits} />
         </CardContent>
       </Card>
     </div>
