@@ -5,6 +5,8 @@ import { Analytics } from "@vercel/analytics/next";
 import "./globals.css";
 import { ThemeProvider } from "@/components/theme-provider";
 import { ScrollToTop } from "@/components/scroll-to-top";
+import { AnalyticsTracker } from "@/components/analytics-tracker";
+import { Suspense } from "react";
 
 const _geist = Geist({ subsets: ["latin"] });
 const _geistMono = Geist_Mono({ subsets: ["latin"] });
@@ -51,6 +53,9 @@ export default function RootLayout({
       <body className={`font-sans antialiased`}>
         <ThemeProvider attribute="class" defaultTheme="light" enableSystem>
           <ScrollToTop />
+          <Suspense fallback={null}>
+            <AnalyticsTracker />
+          </Suspense>
           {children}
         </ThemeProvider>
         <Analytics />

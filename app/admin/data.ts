@@ -181,7 +181,7 @@ export async function deleteDocument(id: string, public_id: string, projectId: s
   }
 }
 
-// --- Stats ---
+// --- Stats & Analytics ---
 
 export async function getStats() {
   const supabase = await createClient()
@@ -199,10 +199,52 @@ export async function getStats() {
     .from('madhyavarti_documents')
     .select('*', { count: 'exact', head: true })
 
+  // Analytics Stats
+  // We fetch last 5000 visits to aggregate in memory for now.
+  // Ideally this should be a DB RPC function for scalability.
+  const { data: visits } = await supabase
+    .from('site_visits')
+    .select('visitor_id, page_path, created_at, user_agent, ip_address, country, city')
+    .order('created_at', { ascending: false })
+    .limit(5000)
+
+  const totalVisits = visits?.length || 0
+  
+  // Unique Visitors
+  const uniqueVisitors = new Set(visits?.map(v => v.visitor_id)).size
+
+  // Top Pages
+  const pageCounts: Record<string, number> = {}
+  visits?.forEach(v => {
+    pageCounts[v.page_path] = (pageCounts[v.page_path] || 0) + 1
+  })
+  
+  const topPages = Object.entries(pageCounts)
+    .sort(([, a], [, b]) => b - a)
+    .slice(0, 5)
+    .map(([path, count]) => ({ path, count }))
+
+  // Top Countries
+  const countryCounts: Record<string, number> = {}
+  visits?.forEach(v => {
+    const c = v.country && v.country !== 'Unknown' ? v.country : 'Other'
+    countryCounts[c] = (countryCounts[c] || 0) + 1
+  })
+
+  const topCountries = Object.entries(countryCounts)
+    .sort(([, a], [, b]) => b - a)
+    .slice(0, 5)
+    .map(([country, count]) => ({ country, count }))
+
   return {
     projects: projectCount || 0,
     activeProjects: activeProjects || 0,
-    documents: docCount || 0
+    documents: docCount || 0,
+    totalVisits,
+    uniqueVisitors,
+    topPages,
+    topCountries,
+    recentVisits: visits?.slice(0, 5) || []
   }
 }
 
@@ -218,11 +260,6 @@ export async function getRecentProjects() {
 
 export async function getRecentDocuments() {
   const supabase = await createClient()
-  // Join with projects to get project name if possible, 
-  // but Supabase simple client might need manual join or view.
-  // For now, let's just get docs and fetch project names separately or just show doc details.
-  // Actually, we can select project_id and we might need to fetch project details for the list.
-  // Let's keep it simple: just docs.
   const { data } = await supabase
     .from('madhyavarti_documents')
     .select('*, projects(name)')

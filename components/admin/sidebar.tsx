@@ -3,7 +3,7 @@
 import { useState } from 'react'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
-import { FileText, LayoutDashboard, LogOut, Menu } from 'lucide-react'
+import { FileText, LayoutDashboard, LogOut, Menu, BarChart3 } from 'lucide-react'
 
 import { cn } from '@/lib/utils'
 import { Button } from '@/components/ui/button'
@@ -26,6 +26,11 @@ const sidebarItems = [
     title: 'Documents',
     href: '/admin/documents',
     icon: FileText,
+  },
+  {
+    title: 'Analytics',
+    href: '/admin/analytics',
+    icon: BarChart3,
   },
 ]
 
