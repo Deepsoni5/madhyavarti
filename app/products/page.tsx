@@ -2,7 +2,7 @@ import type { Metadata } from "next"
 import Link from "next/link"
 import { Header } from "@/components/header"
 import { Footer } from "@/components/footer"
-import { ArrowRight, CheckCircle, Globe, BarChart3, Users, Clock, TrendingUp, Building2, Briefcase, Shield } from "lucide-react"
+import { ArrowRight, CheckCircle, Globe, BarChart3, Users, Clock, TrendingUp, Building2, Briefcase, Shield, PenTool, UploadCloud, Share2, Download } from "lucide-react"
 
 export const metadata: Metadata = {
   title: "Our Products | Madhyavarti Solutions",
@@ -34,6 +34,13 @@ export default function Products() {
     { icon: Briefcase, text: "Strategic advisory" },
     { icon: Building2, text: "Global sector reach" },
     { icon: Shield, text: "Absolute discretion" },
+  ]
+
+  const esignviaFeatures = [
+    { icon: PenTool, text: "Smart E-Signatures" },
+    { icon: UploadCloud, text: "Easy Upload" },
+    { icon: Share2, text: "Collaboration" },
+    { icon: Download, text: "Instant Download" },
   ]
 
   return (
@@ -214,6 +221,62 @@ export default function Products() {
                   href="https://merzvia.com"
                   target="_blank"
                   className="px-6 py-3 rounded-full bg-violet-600 text-white font-semibold hover:bg-violet-700 transition-colors flex items-center justify-center gap-2 hover:shadow-lg hover:shadow-violet-600/30"
+                >
+                  Visit Website
+                  <ArrowRight className="w-4 h-4" />
+                </Link>
+              </div>
+            </div>
+          </div>
+
+          {/* ESignVia */}
+          <div className="group relative rounded-3xl overflow-hidden border border-border bg-card hover:border-primary/50 transition-all duration-300 hover:shadow-2xl hover:shadow-primary/10">
+            <div className="absolute inset-0 bg-gradient-to-br from-purple-600/10 to-pink-600/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+
+            <div className="relative z-10 p-8 sm:p-12 h-full flex flex-col justify-between">
+              {/* Header */}
+              <div className="space-y-4 mb-8">
+                <div className="inline-flex px-4 py-2 rounded-full bg-purple-500/10 border border-purple-500/30">
+                  <span className="text-sm font-semibold text-purple-600 dark:text-purple-400">Digital Signatures</span>
+                </div>
+                <h2 className="text-4xl sm:text-5xl font-bold text-foreground">ESignVia</h2>
+                <p className="text-lg text-muted-foreground leading-relaxed">
+                  Next-Gen Electronic Signatures. Sign documents smarter and faster.
+                </p>
+              </div>
+
+              {/* About Section */}
+              <div className="space-y-6 mb-8 pb-8 border-b border-border">
+                <div>
+                  <h3 className="text-xl font-bold text-foreground mb-3">About ESignVia</h3>
+                  <p className="text-muted-foreground leading-relaxed">
+                    ESignVia provides the most intuitive way to upload, sign, and manage your documents. Built for speed, security, and the modern professional.
+                  </p>
+                </div>
+              </div>
+
+              {/* Features */}
+              <div className="space-y-4 mb-8">
+                <h3 className="text-xl font-bold text-foreground">Key Features</h3>
+                <div className="grid grid-cols-2 gap-3">
+                  {esignviaFeatures.map((feature, idx) => {
+                    const Icon = feature.icon
+                    return (
+                      <div key={idx} className="flex items-center gap-3 p-3 rounded-lg bg-purple-500/5">
+                        <Icon className="w-5 h-5 text-purple-600 dark:text-purple-400 flex-shrink-0" />
+                        <span className="text-sm font-medium text-foreground">{feature.text}</span>
+                      </div>
+                    )
+                  })}
+                </div>
+              </div>
+
+              {/* CTA */}
+              <div className="flex flex-col sm:flex-row gap-4">
+                <Link
+                  href="https://esignvia.com"
+                  target="_blank"
+                  className="px-6 py-3 rounded-full bg-purple-600 text-white font-semibold hover:bg-purple-700 transition-colors flex items-center justify-center gap-2 hover:shadow-lg hover:shadow-purple-600/30"
                 >
                   Visit Website
                   <ArrowRight className="w-4 h-4" />

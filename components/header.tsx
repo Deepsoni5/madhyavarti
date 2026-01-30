@@ -43,7 +43,7 @@ export function Header() {
           <Link href="/" className="text-foreground hover:text-primary transition-colors font-medium">
             Home
           </Link>
-          <Link href="/esign" className="text-foreground hover:text-primary transition-colors font-medium">
+          <Link href="https://www.esignvia.com/esign" target="_blank" className="text-foreground hover:text-primary transition-colors font-medium">
             E-Sign
           </Link>
           <Link href="/about" className="text-foreground hover:text-primary transition-colors font-medium">
@@ -67,7 +67,7 @@ export function Header() {
               <Link href="/" className="text-foreground hover:text-primary transition-colors font-medium">
                 Home
               </Link>
-              <Link href="/esign" className="text-foreground hover:text-primary transition-colors font-medium">
+              <Link href="https://www.esignvia.com/esign" target="_blank" className="text-foreground hover:text-primary transition-colors font-medium">
                 E-Sign
               </Link>
               <Link href="/about" className="text-foreground hover:text-primary transition-colors font-medium">

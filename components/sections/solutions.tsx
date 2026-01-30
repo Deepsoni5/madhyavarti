@@ -1,7 +1,7 @@
 "use client"
 
 import Link from "next/link"
-import { Users, CheckCircle, Clock, Globe, BarChart3, ArrowRight, Shield, TrendingUp, Building2, Briefcase } from "lucide-react"
+import { Users, CheckCircle, Clock, Globe, BarChart3, ArrowRight, Shield, TrendingUp, Building2, Briefcase, PenTool, UploadCloud, Share2, Download } from "lucide-react"
 
 export function Solutions() {
   const products = [
@@ -73,6 +73,29 @@ export function Solutions() {
       iconText: "text-violet-600 dark:text-violet-400",
       hoverGradient: "from-violet-600/10 to-indigo-600/10",
       link: "https://merzvia.com",
+    },
+    {
+      id: "esignvia",
+      title: "ESignVia",
+      subtitle: "Digital Signatures",
+      description:
+        "Next-Gen Electronic Signatures. Sign documents smarter and faster.",
+      about:
+        "ESignVia provides the most intuitive way to upload, sign, and manage your documents. Built for speed, security, and the modern professional.",
+      features: [
+        { icon: PenTool, text: "Smart E-Signatures" },
+        { icon: UploadCloud, text: "Easy Upload" },
+        { icon: Share2, text: "Collaboration" },
+        { icon: Download, text: "Instant Download" },
+      ],
+      color: "from-purple-600 to-pink-600",
+      badgeBg: "bg-purple-500/10",
+      badgeBorder: "border-purple-500/30",
+      badgeText: "text-purple-600 dark:text-purple-400",
+      iconBg: "bg-purple-500/5",
+      iconText: "text-purple-600 dark:text-purple-400",
+      hoverGradient: "from-purple-600/10 to-pink-600/10",
+      link: "https://esignvia.com",
     },
   ]
 
