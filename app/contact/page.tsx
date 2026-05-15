@@ -121,8 +121,8 @@ export default function Contact() {
                     <div className="text-accent">📞</div>
                     <div>
                       <p className="font-medium text-foreground">Phone</p>
-                      <a href="tel:+918618629391" className="text-primary hover:text-primary/80">
-                        +91 8618629391
+                      <a href="tel:+918431767538" className="text-primary hover:text-primary/80">
+                        +91 8431767538
                       </a>
                     </div>
                   </div>

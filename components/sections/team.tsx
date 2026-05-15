@@ -16,15 +16,6 @@ export function Team() {
       bio: "Backed with 15+ years of hands-on entrepreneurial and Finance experience, he has built and operated multiple ventures across foodtech, HR tech, staffing, and technology-driven industries. Known for his clarity, sharp decision-making, and team-building abilities, he drives KuCash with a clear purpose — to create a transparent global ecosystem where trust becomes the core of lending.",
       color: "from-blue-600 to-cyan-600",
     },
-    {
-      name: "Kiran Biradar",
-      role: "Co-Founder",
-      qualification: "B.Sc (CS)",
-      image: "/pf1.jpeg",
-      experience: "5+ Years Experience in Finance",
-      bio: "With over 5 years of solid experience in Finance, he brings a robust entrepreneurial and operational background spanning the fintech, fashion-tech, and manpower industries. He possesses an exceptional ability to understand borrower psychology and align large teams toward a common mission of financial inclusion. His practical experience in managing complex operations makes him an ideal counterpart to the founder, ensuring KuCash builds a scalable, people-first platform.",
-      color: "from-emerald-600 to-teal-600",
-    },
   ]
 
   return (
@@ -50,7 +41,7 @@ export function Team() {
         </div>
 
         {/* Leaders Grid */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-10">
+        <div className="grid grid-cols-1 max-w-3xl mx-auto">
           {leaders.map((leader, index) => (
             <motion.div
               initial={{ opacity: 0, y: 20 }}
