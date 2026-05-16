@@ -1,10 +1,36 @@
 "use client"
 
 import Link from "next/link"
-import { Users, CheckCircle, Clock, Globe, BarChart3, ArrowRight, Shield, TrendingUp, Building2, Briefcase, PenTool, UploadCloud, Share2, Download } from "lucide-react"
+import { Users, CheckCircle, Clock, Globe, BarChart3, ArrowRight, Shield, TrendingUp, Building2, Briefcase, PenTool, UploadCloud, Share2, Download, GraduationCap, Gamepad2, Trophy, MonitorPlay, UsersRound, LockKeyhole, School } from "lucide-react"
 
 export function Solutions() {
   const products = [
+    {
+      id: "qidzo",
+      title: "Qidzo",
+      subtitle: "EdTech + Social Learning",
+      description:
+        "The all-in-one platform for kids that combines learning, gaming, and social interaction in a safe, parent-controlled environment.",
+      about:
+        "Qidzo is a comprehensive SaaS application merging EdTech, social learning, and social media-like engagement for kids. Children learn through interactive tutorials, play educational games, earn points, and level up—all within a 100% parent-controlled ecosystem where screen time limits and activity monitoring are seamless. The platform also supports full school onboarding, enabling live sessions, exams, and complete academic result tracking.",
+      features: [
+        { icon: GraduationCap, text: "EdTech Learning" },
+        { icon: Gamepad2, text: "Educational Games" },
+        { icon: Trophy, text: "Points & Level Up" },
+        { icon: LockKeyhole, text: "Parent Control" },
+        { icon: School, text: "School Onboarding" },
+        { icon: MonitorPlay, text: "Live Sessions" },
+      ],
+      color: "from-orange-500 to-rose-500",
+      badgeBg: "bg-orange-500/10",
+      badgeBorder: "border-orange-500/30",
+      badgeText: "text-orange-600 dark:text-orange-400",
+      iconBg: "bg-orange-500/5",
+      iconText: "text-orange-600 dark:text-orange-400",
+      hoverGradient: "from-orange-500/10 to-rose-500/10",
+      link: "https://qidzo.com",
+      isMain: true
+    },
     {
       id: "jobonix",
       title: "Jobonix",
@@ -121,19 +147,73 @@ export function Solutions() {
           </p>
         </div>
 
+        {/* Main Highlighted Product (Qidzo) */}
+        {products.filter(p => p.isMain).map((product) => (
+          <div
+            key={product.id}
+            className="group relative rounded-3xl overflow-hidden border-2 border-orange-500/50 bg-card shadow-2xl shadow-orange-500/20 mb-12"
+          >
+            <div
+              className={`absolute inset-0 bg-gradient-to-br ${product.hoverGradient} opacity-100`}
+            />
+            <div className="relative z-10 p-8 sm:p-12 h-full">
+              <div className="space-y-4 mb-8">
+                <div
+                  className={`inline-flex px-4 py-2 rounded-full ${product.badgeBg} border ${product.badgeBorder}`}
+                >
+                  <span className={`text-sm font-semibold ${product.badgeText}`}>Flagship Product • {product.subtitle}</span>
+                </div>
+                <h3 className="text-4xl sm:text-6xl font-bold text-foreground">{product.title}</h3>
+                <p className="text-xl text-muted-foreground leading-relaxed max-w-3xl">{product.description}</p>
+              </div>
+              <div className="space-y-6 mb-8 pb-8 border-b border-border/50">
+                <div>
+                  <h4 className="text-xl font-bold text-foreground mb-3">About {product.title}</h4>
+                  <p className="text-muted-foreground leading-relaxed text-lg">{product.about}</p>
+                </div>
+              </div>
+              <div className="space-y-4 mb-8">
+                <h4 className="text-xl font-bold text-foreground">Key Features</h4>
+                <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
+                  {product.features.map((feature, idx) => {
+                    const Icon = feature.icon
+                    return (
+                      <div key={idx} className={`flex items-center gap-3 p-4 rounded-xl ${product.iconBg}`}>
+                        <Icon className={`w-6 h-6 ${product.iconText} flex-shrink-0`} />
+                        <span className="text-sm font-medium text-foreground">{feature.text}</span>
+                      </div>
+                    )
+                  })}
+                </div>
+              </div>
+              <div className="flex flex-col sm:flex-row gap-4">
+                <Link
+                  href={product.link}
+                  target="_blank"
+                  className={`px-8 py-4 rounded-full bg-gradient-to-r ${product.color} text-white font-semibold hover:shadow-2xl transition-all flex items-center justify-center gap-2 text-lg`}
+                  style={{
+                    boxShadow: `0 15px 30px -5px rgba(249, 115, 22, 0.3)`,
+                  }}
+                >
+                  Visit Qidzo
+                  <ArrowRight className="w-5 h-5" />
+                </Link>
+              </div>
+            </div>
+          </div>
+        ))}
+
+        {/* Other Products */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-          {products.map((product) => (
+          {products.filter(p => !p.isMain).map((product) => (
             <div
               key={product.id}
               className="group relative rounded-3xl overflow-hidden border border-border bg-card hover:border-primary/50 transition-all duration-300 hover:shadow-2xl hover:shadow-primary/10"
             >
-              {/* Gradient overlay on hover */}
               <div
                 className={`absolute inset-0 bg-gradient-to-br ${product.hoverGradient} opacity-0 group-hover:opacity-100 transition-opacity duration-300`}
               />
-
               <div className="relative z-10 p-8 sm:p-12 h-full flex flex-col justify-between">
-                {/* Header */}
                 <div className="space-y-4 mb-8">
                   <div
                     className={`inline-flex px-4 py-2 rounded-full ${product.badgeBg} border ${product.badgeBorder}`}
@@ -143,16 +223,12 @@ export function Solutions() {
                   <h3 className="text-4xl sm:text-5xl font-bold text-foreground">{product.title}</h3>
                   <p className="text-lg text-muted-foreground leading-relaxed">{product.description}</p>
                 </div>
-
-                {/* About Section */}
                 <div className="space-y-6 mb-8 pb-8 border-b border-border">
                   <div>
                     <h4 className="text-xl font-bold text-foreground mb-3">About {product.title}</h4>
                     <p className="text-muted-foreground leading-relaxed">{product.about}</p>
                   </div>
                 </div>
-
-                {/* Features */}
                 <div className="space-y-4 mb-8">
                   <h4 className="text-xl font-bold text-foreground">Key Features</h4>
                   <div className="grid grid-cols-2 gap-3">
@@ -167,8 +243,6 @@ export function Solutions() {
                     })}
                   </div>
                 </div>
-
-                {/* CTA */}
                 <div className="flex flex-col sm:flex-row gap-4">
                   <Link
                     href={product.link}

@@ -2,19 +2,28 @@ import type { Metadata } from "next"
 import Link from "next/link"
 import { Header } from "@/components/header"
 import { Footer } from "@/components/footer"
-import { ArrowRight, CheckCircle, Globe, BarChart3, Users, Clock, TrendingUp, Building2, Briefcase, Shield, PenTool, UploadCloud, Share2, Download } from "lucide-react"
+import { ArrowRight, CheckCircle, Globe, BarChart3, Users, Clock, TrendingUp, Building2, Briefcase, Shield, PenTool, UploadCloud, Share2, Download, GraduationCap, Gamepad2, Trophy, MonitorPlay, LockKeyhole, School } from "lucide-react"
 
 export const metadata: Metadata = {
   title: "Our Products | Madhyavarti Solutions",
   description:
-    "Discover Jobonix and Loanery - innovative platforms connecting talent with opportunity and providing ethical financial solutions.",
+    "Discover Qidzo - Our Flagship EdTech platform and more innovative solutions.",
   openGraph: {
     title: "Our Products | Madhyavarti Solutions",
-    description: "Jobonix - Job Portal | Loanery - Fintech Solutions | MerzVia - M&A Advisory",
+    description: "Qidzo - EdTech | Jobonix - Job Portal | KuCash - Fintech | MerzVia - M&A | ESignVia - Digital Signatures",
   },
 }
 
 export default function Products() {
+  const qidzoFeatures = [
+    { icon: GraduationCap, text: "EdTech Learning" },
+    { icon: Gamepad2, text: "Educational Games" },
+    { icon: Trophy, text: "Points & Level Up" },
+    { icon: LockKeyhole, text: "Parent Control" },
+    { icon: School, text: "School Onboarding" },
+    { icon: MonitorPlay, text: "Live Sessions" },
+  ]
+
   const jobonixFeatures = [
     { icon: Users, text: "Smart job matching" },
     { icon: CheckCircle, text: "Skill-based filtering" },
@@ -59,7 +68,60 @@ export default function Products() {
           </p>
         </div>
 
-        {/* Products Grid */}
+        {/* Flagship Product: Qidzo */}
+        <div className="max-w-7xl mx-auto mb-16">
+          <div className="group relative rounded-3xl overflow-hidden border-2 border-orange-500/50 bg-card shadow-2xl shadow-orange-500/20">
+            <div className="absolute inset-0 bg-gradient-to-br from-orange-500/10 to-rose-500/10" />
+            <div className="relative z-10 p-8 sm:p-12">
+              <div className="space-y-4 mb-8">
+                <div className="inline-flex px-4 py-2 rounded-full bg-orange-500/10 border border-orange-500/30">
+                  <span className="text-sm font-semibold text-orange-600 dark:text-orange-400">Flagship Product • EdTech + Social Learning</span>
+                </div>
+                <h2 className="text-4xl sm:text-6xl font-bold text-foreground">Qidzo</h2>
+                <p className="text-xl text-muted-foreground leading-relaxed max-w-3xl">
+                  The all-in-one platform for kids that combines learning, gaming, and social interaction in a safe, parent-controlled environment.
+                </p>
+              </div>
+              <div className="space-y-6 mb-8 pb-8 border-b border-border/50">
+                <div>
+                  <h3 className="text-xl font-bold text-foreground mb-3">About Qidzo</h3>
+                  <p className="text-muted-foreground leading-relaxed text-lg">
+                    Qidzo is a comprehensive SaaS application merging EdTech, social learning, and social media-like engagement for kids. Children learn through interactive tutorials, play educational games, earn points, and level up—all within a 100% parent-controlled ecosystem where screen time limits and activity monitoring are seamless. The platform also supports full school onboarding, enabling live sessions, exams, and complete academic result tracking.
+                  </p>
+                </div>
+              </div>
+              <div className="space-y-4 mb-8">
+                <h3 className="text-xl font-bold text-foreground">Key Features</h3>
+                <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
+                  {qidzoFeatures.map((feature, idx) => {
+                    const Icon = feature.icon
+                    return (
+                      <div key={idx} className="flex items-center gap-3 p-4 rounded-xl bg-orange-500/5">
+                        <Icon className="w-6 h-6 text-orange-600 dark:text-orange-400 flex-shrink-0" />
+                        <span className="text-sm font-medium text-foreground">{feature.text}</span>
+                      </div>
+                    )
+                  })}
+                </div>
+              </div>
+              <div className="flex flex-col sm:flex-row gap-4">
+                <Link
+                  href="https://qidzo.com"
+                  target="_blank"
+                  className="px-8 py-4 rounded-full bg-gradient-to-r from-orange-500 to-rose-500 text-white font-semibold hover:shadow-2xl transition-all flex items-center justify-center gap-2 text-lg"
+                  style={{
+                    boxShadow: `0 15px 30px -5px rgba(249, 115, 22, 0.3)`,
+                  }}
+                >
+                  Visit Qidzo
+                  <ArrowRight className="w-5 h-5" />
+                </Link>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Other Products Grid */}
         <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8">
           {/* Jobonix */}
           <div className="group relative rounded-3xl overflow-hidden border border-border bg-card hover:border-primary/50 transition-all duration-300 hover:shadow-2xl hover:shadow-primary/10">
